@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5"
+    />
+    <meta name="author" content="AdminKit" />
+    <meta
+      name="keywords"
+      content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+
+    <link
+      rel="canonical"
+      href="https://demo-basic.adminkit.io/pages-profile.html"
+    />
+
+    <title>Doanh thu & đơn hàng</title>
+
+    <link href="css/app.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <nav id="sidebar" class="sidebar js-sidebar">
+        <div class="sidebar-content js-simplebar">
+          <a class="sidebar-brand" href="index.html">
+            <span class="align-middle">Quản lý kho</span>
+          </a>
+
+          <ul class="sidebar-nav">
+            <li class="sidebar-header">Bảng điều khiển</li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="index.html">
+                <i class="align-middle" data-feather="sliders"></i>
+                <span class="align-middle">Thông tin chung</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item active">
+              <a class="sidebar-link" href="sales.html">
+                <i class="align-middle me-2" data-feather="info"></i>
+                <span class="align-middle">Doanh thu & đơn hàng</span>
+              </a>
+            </li>
+
+            <li class="sidebar-header">Vận hành</li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="inbound-request.html">
+                <i class="align-middle me-2" data-feather="log-in"></i>
+                <span class="align-middle">Nhập kho</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="outbound-request.html">
+                <i class="align-middle me-2" data-feather="log-out"></i>
+                <span class="align-middle">Xuất kho</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="iventory.html">
+                <i class="align-middle" data-feather="book"></i>
+                <span class="align-middle">Kiểm kê</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="report.html">
+                <i class="align-middle" data-feather="bar-chart-2"></i>
+                <span class="align-middle">Báo cáo</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="product-list.html">
+                <i class="align-middle me-2" data-feather="database"></i>
+                <span class="align-middle">Danh sách sản phẩm</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="main">
+        <nav class="navbar navbar-expand navbar-light navbar-bg">
+          <a class="sidebar-toggle js-sidebar-toggle">
+            <i class="hamburger align-self-center"></i>
+          </a>
+
+          <div class="navbar-collapse collapse">
+            <ul class="navbar-nav navbar-align">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-icon dropdown-toggle d-inline-block d-sm-none"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  <i class="align-middle" data-feather="settings"></i>
+                </a>
+
+                <a
+                  class="nav-link dropdown-toggle d-none d-sm-inline-block"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  <img
+                    src="img/avatars/avatar-0.jpg"
+                    class="avatar img-fluid rounded me-1"
+                  />
+                  <span class="text-dark">Xin chào</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <a class="dropdown-item" href="pages-log-in.html"
+                    >Đăng xuất</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main class="content">
+          <div class="container-fluid p-0">
+            <div class="row">
+              <div class="col-xl-12 col-xxl-12 d-flex">
+                <div class="w-100">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col mt-0">
+                              <h5 class="card-title">Hôm nay</h5>
+                            </div>
+
+                            <div class="col-auto">
+                              <div class="stat text-primary">
+                                <i
+                                  class="align-middle"
+                                  data-feather="dollar-sign"
+                                ></i>
+                              </div>
+                            </div>
+                          </div>
+                          <h1 class="mt-1 mb-3">452$</h1>
+                          <div class="mb-0">
+                            <span class="text-danger">
+                              <i class="mdi mdi-arrow-bottom-right"></i> -3.65%
+                            </span>
+                            <span class="text-muted"
+                              >So với trung bình ngày</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col mt-0">
+                              <h5 class="card-title">Một tuần</h5>
+                            </div>
+
+                            <div class="col-auto">
+                              <div class="stat text-primary">
+                                <i
+                                  class="align-middle"
+                                  data-feather="dollar-sign"
+                                ></i>
+                              </div>
+                            </div>
+                          </div>
+                          <h1 class="mt-1 mb-3">7515$</h1>
+                          <div class="mb-0">
+                            <span class="text-success">
+                              <i class="mdi mdi-arrow-bottom-right"></i> 5.25%
+                            </span>
+                            <span class="text-muted">So với tuần trước</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col mt-0">
+                              <h5 class="card-title">Hôm qua</h5>
+                            </div>
+
+                            <div class="col-auto">
+                              <div class="stat text-primary">
+                                <i
+                                  class="align-middle"
+                                  data-feather="dollar-sign"
+                                ></i>
+                              </div>
+                            </div>
+                          </div>
+                          <h1 class="mt-1 mb-3">659$</h1>
+                          <div class="mb-0">
+                            <span class="text-success">
+                              <i class="mdi mdi-arrow-bottom-right"></i> 6.65%
+                            </span>
+                            <span class="text-muted">
+                              So với trung bình ngày</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col mt-0">
+                              <h5 class="card-title">MTD</h5>
+                            </div>
+
+                            <div class="col-auto">
+                              <div class="stat text-primary">
+                                <i
+                                  class="align-middle"
+                                  data-feather="dollar-sign"
+                                ></i>
+                              </div>
+                            </div>
+                          </div>
+                          <h1 class="mt-1 mb-3">14365$</h1>
+                          <div class="mb-0">
+                            <span class="text-danger">
+                              <i class="mdi mdi-arrow-bottom-right">7.39%</i>
+                            </span>
+                            <span class="text-muted"
+                              >So với tháng bình thường</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="title-request">
+              <h1 class="h3 d-inline align-middle">Top 10 sản phẩm bán chạy</h1>
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Tên mặt hàng</th>
+                  <th scope="col">Tổng sản phẩm bán được</th>
+                  <th scope="col">Lợi nhuận/sản phẩm</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry
+                  </td>
+                  <td>2485</td>
+                  <td>0.17$</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry
+                  </td>
+                  <td>2368</td>
+                  <td>0.16$</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry
+                  </td>
+                  <td>2241</td>
+                  <td>0.15$</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry
+                  </td>
+                  <td>2238</td>
+                  <td>0.13$</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry
+                  </td>
+                  <td>2219</td>
+                  <td>0.19$</td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry
+                  </td>
+                  <td>2198</td>
+                  <td>0.11$</td>
+                </tr>
+                <tr>
+                  <th scope="row">7</th>
+                  <td>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry
+                  </td>
+                  <td>2157</td>
+                  <td>0.12$</td>
+                </tr>
+                <tr>
+                  <th scope="row">8</th>
+                  <td>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry
+                  </td>
+                  <td>2123</td>
+                  <td>0.15$</td>
+                </tr>
+                <tr>
+                  <th scope="row">9</th>
+                  <td>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry
+                  </td>
+                  <td>2099</td>
+                  <td>0.17$</td>
+                </tr>
+                <tr>
+                  <th scope="row">10</th>
+                  <td>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry
+                  </td>
+                  <td>1972</td>
+                  <td>0.2$</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </main>
+
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row text-muted">
+              <div class="col-12 text-end">
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <a class="text-muted" href="#/" target="_blank">Trợ giúp</a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="text-muted" href="#/" target="_blank"
+                      >Trung tâm hỗ trợ</a
+                    >
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="text-muted" href="#/" target="_blank">Riêng tư</a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="text-muted" href="#/" target="_blank"
+                      >Điều khoản</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
