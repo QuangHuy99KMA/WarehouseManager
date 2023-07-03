@@ -15,6 +15,7 @@
 // }
 
 // validation form register and register user local storage
+const inputNameRegister = document.querySelector(".input-signup-name");
 const inputUsernameRegister = document.querySelector(".input-signup-username");
 const inputPasswordRegister = document.querySelector(".input-signup-password");
 const inputRepeatPasswordRegister = document.querySelector(".input-signup-repeat-password");
@@ -24,6 +25,7 @@ const btnRegister = document.querySelector(".signup__signInButton");
 btnRegister.addEventListener("click", (e) => {
     e.preventDefault();
     if (
+        inputNameRegister.value === "" ||
         inputUsernameRegister.value === "" ||
         inputPasswordRegister.value === "" ||
         inputRepeatPasswordRegister.value === ""
@@ -37,6 +39,7 @@ btnRegister.addEventListener("click", (e) => {
     else {
         // array user
         const user = {
+            name: inputNameRegister.value,
             username: inputUsernameRegister.value,
             password: inputPasswordRegister.value,
         };

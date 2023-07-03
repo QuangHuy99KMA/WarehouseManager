@@ -114,6 +114,8 @@ function updateData(index) {
 
             localStorage.setItem("productList", JSON.stringify(productList));
 
+            alert("Thông tin sản phẩm được cập nhật thành công");
+
             showData();
 
             document.getElementById("sku").value = "";
@@ -122,7 +124,7 @@ function updateData(index) {
             document.getElementById("type-product").value = "";
 
             document.getElementById("submit").style.display = "block";
-            document.getElementById("update").style.display = "none";
+            document.getElementById("update").style.display = "block";
         }
     }
 }
