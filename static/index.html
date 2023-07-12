@@ -56,6 +56,13 @@
               </a>
             </li>
 
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="report.html">
+                <i class="align-middle" data-feather="bar-chart-2"></i>
+                <span class="align-middle">Báo cáo</span>
+              </a>
+            </li>
+
             <li class="sidebar-header">Vận hành</li>
 
             <li class="sidebar-item">
@@ -76,13 +83,6 @@
               <a class="sidebar-link" href="iventory.html">
                 <i class="align-middle" data-feather="book"></i>
                 <span class="align-middle">Kiểm kê</span>
-              </a>
-            </li>
-
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="report.html">
-                <i class="align-middle" data-feather="bar-chart-2"></i>
-                <span class="align-middle">Báo cáo</span>
               </a>
             </li>
 
@@ -490,22 +490,22 @@
           type: "line",
           data: {
             labels: [
-              "Jan",
-              "Feb",
-              "Mar",
-              "Apr",
-              "May",
-              "Jun",
-              "Jul",
-              "Aug",
-              "Sep",
-              "Oct",
-              "Nov",
-              "Dec",
+              "Tháng 1",
+              "Tháng 2",
+              "Tháng 3",
+              "Tháng 4",
+              "Tháng 5",
+              "Tháng 6",
+              "Tháng 7",
+              "Tháng 8",
+              "Tháng 9",
+              "Tháng 10",
+              "Tháng 11",
+              "Tháng 12",
             ],
             datasets: [
               {
-                label: "Sales ($)",
+                label: "Số tiền ($)",
                 fill: true,
                 backgroundColor: gradient,
                 borderColor: window.theme.primary,
@@ -595,22 +595,22 @@
           type: "bar",
           data: {
             labels: [
-              "Jan",
-              "Feb",
-              "Mar",
-              "Apr",
-              "May",
-              "Jun",
-              "Jul",
-              "Aug",
-              "Sep",
-              "Oct",
-              "Nov",
-              "Dec",
+              "Tháng 1",
+              "Tháng 2",
+              "Tháng 3",
+              "Tháng 4",
+              "Tháng 5",
+              "Tháng 6",
+              "Tháng 7",
+              "Tháng 8",
+              "Tháng 9",
+              "Tháng 10",
+              "Tháng 11",
+              "Tháng 12",
             ],
             datasets: [
               {
-                label: "This year",
+                label: "Năm nay",
                 backgroundColor: window.theme.primary,
                 borderColor: window.theme.primary,
                 hoverBackgroundColor: window.theme.primary,
@@ -730,8 +730,8 @@
           date.getUTCDate();
         document.getElementById("datetimepicker-dashboard").flatpickr({
           inline: true,
-          prevArrow: '<span title="Previous month">&laquo;</span>',
-          nextArrow: '<span title="Next month">&raquo;</span>',
+          prevArrow: '<span title="Tháng trước">&laquo;</span>',
+          nextArrow: '<span title="Tháng sau">&raquo;</span>',
           defaultDate: defaultDate,
         });
       });

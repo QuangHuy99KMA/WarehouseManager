@@ -56,6 +56,13 @@
               </a>
             </li>
 
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="report.html">
+                <i class="align-middle" data-feather="bar-chart-2"></i>
+                <span class="align-middle">Báo cáo</span>
+              </a>
+            </li>
+
             <li class="sidebar-header">Vận hành</li>
 
             <li class="sidebar-item active">
@@ -76,13 +83,6 @@
               <a class="sidebar-link" href="iventory.html">
                 <i class="align-middle" data-feather="book"></i>
                 <span class="align-middle">Kiểm kê</span>
-              </a>
-            </li>
-
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="report.html">
-                <i class="align-middle" data-feather="bar-chart-2"></i>
-                <span class="align-middle">Báo cáo</span>
               </a>
             </li>
 
@@ -141,184 +141,111 @@
         </nav>
 
         <main class="content">
-          <div class="container-fluid p-0"></div>
           <div>
             <div class="title-request">
-              <h1 class="h3 d-inline align-middle">Yêu cầu nhập kho</h1>
-              <div class="form-control-input">
-                <input
-                  type="file"
-                  accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
-                />
-                <button id="myBtn">Nhập vào</button>
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-                  <!-- Modal content -->
-                  <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <p>Import yêu cầu nhập kho thành công</p>
+              <div class="h3 d-inline align-middle">Yêu cầu nhập kho</div>
+            </div>
+            <div class="mb-4">
+              <div class="row">
+                <div class="form-group col-md-6 mb-3">
+                  <label for="ir-code">Mã IR</label>
+                  <input
+                    type="text"
+                    name="ir-code"
+                    class="form-control"
+                    id="ir-code"
+                    placeholder="Nhập vào mã IR"
+                  />
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="quantity-sku">Số lượng SKU</label>
+                  <input
+                    type="text"
+                    name="quantity-sku"
+                    class="form-control"
+                    id="quantity-sku"
+                    placeholder="Nhập vào số lượng SKU"
+                  />
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="quantity-product">Số lượng sản phẩm</label>
+                  <input
+                    type="text"
+                    name="quantity-product"
+                    class="form-control"
+                    id="quantity-product"
+                    placeholder="Nhập vào số lượng sản phẩm"
+                  />
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="status-product">Trạng thái sản phẩm</label>
+                  <input
+                    type="text"
+                    name="status-product"
+                    class="form-control"
+                    id="status-product"
+                    placeholder="Nhập vào trạng thái sản phẩm"
+                  />
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="date">Ngày nhập</label>
+                  <input
+                    type="date"
+                    name="date"
+                    class="form-control"
+                    id="date"
+                    placeholder="Nhập vào ngày nhập sản phẩm"
+                  />
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="warehouse">Kho nhập</label>
+                  <input
+                    type="text"
+                    name="warehouse"
+                    class="form-control"
+                    id="warehouse"
+                    placeholder="Nhập vào tên kho"
+                  />
+                </div>
+                <div class="col-lg-12 d-flex">
+                  <div>
+                    <button
+                      class="btn btn-success"
+                      id="submit"
+                      onclick="addData()"
+                    >
+                      Thêm dữ liệu
+                    </button>
+                  </div>
+                  <div class="mx-3">
+                    <button class="btn btn-info" id="update">
+                      Sửa dữ liệu
+                    </button>
+                  </div>
+                  <div>
+                    <button
+                      class="btn btn-primary"
+                      onclick="ExportToExcel('xlsx')"
+                    >
+                      Xuất excel
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
-            <table class="table">
+            <table class="table table-bordered" id="crudTable">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Mã IR</th>
-                  <th scope="col">Mã IR đối tác</th>
-                  <th scope="col">Trạng thái</th>
-                  <th scope="col">Ngày nhập</th>
-                  <th scope="col">Kho nhập</th>
+                  <th>Mã IR</th>
+                  <th>Số lượng SKU</th>
+                  <th>Số lượng sản phẩm</th>
+                  <th>Trạng thái</th>
+                  <th>Ngày nhập</th>
+                  <th>Kho nhập</th>
+                  <th>Chức năng</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>IRXQJS10AS</td>
-                  <td>70663060</td>
-                  <td>
-                    <span class="badge bg-success">Hoàn Thành</span>
-                  </td>
-                  <td>15/03/2023</td>
-                  <td>Kho A</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>IRKZR9603G</td>
-                  <td>22119865</td>
-                  <td>
-                    <span class="badge bg-success">Hoàn Thành</span>
-                  </td>
-                  <td>16/03/2023</td>
-                  <td>Kho B</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>IR5UQPOVQI</td>
-                  <td>70663060</td>
-                  <td><span class="badge bg-danger">Huỷ</span></td>
-                  <td>20/03/2023</td>
-                  <td>Kho B</td>
-                </tr>
-                <tr>
-                  <th scope="row">4</th>
-                  <td>IRZ009U34B</td>
-                  <td>61294483</td>
-                  <td><span class="badge bg-danger">Huỷ</span></td>
-                  <td>21/03/2023</td>
-                  <td>Kho B</td>
-                </tr>
-                <tr>
-                  <th scope="row">5</th>
-                  <td>IRS1WSTHWHI</td>
-                  <td>50984260</td>
-                  <td>
-                    <span class="badge bg-warning">Đang chờ</span>
-                  </td>
-                  <td>24/03/2023</td>
-                  <td>Kho C</td>
-                </tr>
-                <tr>
-                  <th scope="row">6</th>
-                  <td>IRVC065WGV</td>
-                  <td>73700496</td>
-                  <td>
-                    <span class="badge bg-warning">Đang chờ</span>
-                  </td>
-                  <td>15/03/2023</td>
-                  <td>Kho D</td>
-                </tr>
-                <tr>
-                  <th scope="row">7</th>
-                  <td>IRO63MS5RR</td>
-                  <td>30/03/2023</td>
-                  <td>
-                    <span class="badge bg-success">Hoàn Thành</span>
-                  </td>
-                  <td>03/04/2023</td>
-                  <td>Kho A</td>
-                </tr>
-                <tr>
-                  <th scope="row">9</th>
-                  <td>IR1MHIJ5BN</td>
-                  <td>38016023</td>
-                  <td>
-                    <span class="badge bg-success">Hoàn Thành</span>
-                  </td>
-                  <td>05/04/2023</td>
-                  <td>Kho D</td>
-                </tr>
-                <tr>
-                  <th scope="row">10</th>
-                  <td>IRTZE8IIP5</td>
-                  <td>20975556</td>
-                  <td>
-                    <span class="badge bg-success">Hoàn Thành</span>
-                  </td>
-                  <td>17/04/2023</td>
-                  <td>Kho C</td>
-                </tr>
-                <tr>
-                  <th scope="row">11</th>
-                  <td>IRFJJXUJER</td>
-                  <td>83174644</td>
-                  <td>
-                    <span class="badge bg-warning">Đang chờ</span>
-                  </td>
-                  <td>19/04/2023</td>
-                  <td>Kho B</td>
-                </tr>
-                <tr>
-                  <th scope="row">12</th>
-                  <td>IR2CD8ZSGK</td>
-                  <td>55069886</td>
-                  <td>
-                    <span class="badge bg-success">Hoàn Thành</span>
-                  </td>
-                  <td>20/04/2023</td>
-                  <td>Kho D</td>
-                </tr>
-
-                <tr>
-                  <th scope="row">13</th>
-                  <td>IR5PFK93OK</td>
-                  <td>21498828</td>
-                  <td>
-                    <span class="badge bg-success">Hoàn Thành</span>
-                  </td>
-                  <td>27/04/2023</td>
-                  <td>Kho A</td>
-                </tr>
-                <tr>
-                  <th scope="row">14</th>
-                  <td>IRQFUSTHO6</td>
-                  <td>03/05/2023</td>
-                  <td>
-                    <span class="badge bg-success">Hoàn Thành</span>
-                  </td>
-                  <td>04/05/2023</td>
-                  <td>Kho C</td>
-                </tr>
-                <tr>
-                  <th scope="row">15</th>
-                  <td>IR37K7SPJD</td>
-                  <td>13428949</td>
-                  <td><span class="badge bg-danger">Huỷ</span></td>
-                  <td>15/03/2023</td>
-                  <td>Kho B</td>
-                </tr>
-                <tr>
-                  <th scope="row">16</th>
-                  <td>IRR41J710T</td>
-                  <td>05/05/2023</td>
-                  <td>
-                    <span class="badge bg-success">Hoàn Thành</span>
-                  </td>
-                  <td>09/05/2023</td>
-                  <td>Kho D</td>
-                </tr>
-              </tbody>
+              <tbody></tbody>
             </table>
           </div>
         </main>
@@ -364,33 +291,20 @@
       </div>
     </div>
 
-    <script>
-      // Get the modal
-      var modal = document.getElementById("myModal");
-
-      // Get the button that opens the modal
-      var btn = document.getElementById("myBtn");
-
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
-
-      // When the user clicks on the button, open the modal
-      btn.onclick = function () {
-        modal.style.display = "block";
-      };
-
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function () {
-        modal.style.display = "none";
-      };
-
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      };
-    </script>
     <script src="js/app.js"></script>
+    <script src="js/ir.js"></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"
+    ></script>
+    <script>
+      function ExportToExcel(type, fn, dl) {
+        var elt = document.getElementById("crudTable");
+        var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
+        return dl
+          ? XLSX.write(wb, { bookType: type, bookSST: true, type: "base64" })
+          : XLSX.writeFile(wb, fn || "Yêu cầu xuất kho." + (type || "xlsx"));
+      }
+    </script>
   </body>
 </html>

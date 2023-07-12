@@ -56,6 +56,13 @@
               </a>
             </li>
 
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="report.html">
+                <i class="align-middle" data-feather="bar-chart-2"></i>
+                <span class="align-middle">Báo cáo</span>
+              </a>
+            </li>
+
             <li class="sidebar-header">Vận hành</li>
 
             <li class="sidebar-item">
@@ -76,13 +83,6 @@
               <a class="sidebar-link" href="iventory.html">
                 <i class="align-middle" data-feather="book"></i>
                 <span class="align-middle">Kiểm kê</span>
-              </a>
-            </li>
-
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="report.html">
-                <i class="align-middle" data-feather="bar-chart-2"></i>
-                <span class="align-middle">Báo cáo</span>
               </a>
             </li>
 
@@ -141,7 +141,6 @@
         </nav>
 
         <main class="content">
-          <div class="container-fluid p-0"></div>
           <div>
             <div class="title-request">
               <h1 class="h3 d-inline align-middle">Danh sách sản phẩm</h1>
@@ -228,7 +227,7 @@
                       class="btn btn-primary"
                       onclick="ExportToExcel('xlsx')"
                     >
-                      Xuất tồn bằng file excel
+                      Xuất excel
                     </button>
                   </div>
                 </div>
@@ -242,8 +241,6 @@
                     <th>Mã SKU</th>
                     <th>Mã SKU đối tác</th>
                     <th>Tên sản phẩm</th>
-                    <!-- <th>Số lượng sản phẩm</th>
-                    <th>Khối lượng mỗi sản phẩm</th> -->
                     <th>Loại sản phẩm</th>
                     <th>Chức năng</th>
                   </tr>
@@ -294,6 +291,7 @@
         </footer>
       </div>
     </div>
+
     <script src="js/app.js"></script>
     <script src="js/product.js"></script>
     <script
@@ -306,7 +304,7 @@
         var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
         return dl
           ? XLSX.write(wb, { bookType: type, bookSST: true, type: "base64" })
-          : XLSX.writeFile(wb, fn || "check1." + (type || "xlsx"));
+          : XLSX.writeFile(wb, fn || "Danh sách sản phẩm." + (type || "xlsx"));
       }
     </script>
   </body>
