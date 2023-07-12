@@ -12036,3 +12036,11 @@ span.flatpickr-weekday {
 a:hover{
     text-decoration: none;
 }
+
+tr th{
+    text-align: center;
+}
+
+tr td{
+    text-align: center;
+}

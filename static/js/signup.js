@@ -24,6 +24,7 @@ const btnRegister = document.querySelector(".signup__signInButton");
 // validation form register and register user local storage
 btnRegister.addEventListener("click", (e) => {
     e.preventDefault();
+    let a = JSON.parse(localStorage.getItem(inputUsernameRegister.value));
     if (
         inputNameRegister.value === "" ||
         inputUsernameRegister.value === "" ||
@@ -31,6 +32,12 @@ btnRegister.addEventListener("click", (e) => {
         inputRepeatPasswordRegister.value === ""
     ) {
         alert("Vui lòng không để trống")
+    }
+    else if (a.username === inputUsernameRegister.value) {
+        alert("Tên tài khoản đã tồn tại. Nếu bạn là chủ tải khoản vui lòng đăng nhập");
+    }
+    else if (inputUsernameRegister.value.length < 5) {
+        alert("Tên tài khoản và mật khẩu có độ dài ít nhất là 6 ký tự");
     } else if (
         inputPasswordRegister.value !== inputRepeatPasswordRegister.value
     ) {
